@@ -1,31 +1,60 @@
+function calc(op) {
+      let n1 = parseFloat(document.getElementById("num1").value);
+      let n2 = parseFloat(document.getElementById("num2").value);
+      let r;
 
-let number = Math.floor(Math.random() * 10) + 1;
-let guess;
+      if (isNaN(n1) || isNaN(n2)) {
+        r = "Please enter numbers.";
+      } else {
+        if (op === '+') r = n1 + n2;
+        if (op === '-') r = n1 - n2;
+        if (op === '*') r = n1 * n2;
+        if (op === '/') r = n2 !== 0 ? n1 / n2 : "Can't divide by 0";
+      }
 
-while (guess !== number) {
-  guess = Number(prompt("Guess a number between 1 and 10"));
+      document.getElementById("result").innerText = "Result: " + r;
+    }
 
-  if (guess === number) {
-    alert("Correct!");
-  } else {
-    alert("Wrong, try again.");
-  }
-}
+    // Toggle paragraph visibility
+    function togglePara() {
+    const p = document.getElementById("para");
+    p.classList.toggle("hidden");
+    }
 
+    // Add task to list
+    function addTask() {
+      let input = document.getElementById("taskInput");
+      let taskText = input.value.trim();
+      if (taskText === "") return;
 
+      let li = document.createElement("li");
+      let checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.onclick = function() {
+        li.classList.toggle("done");
+      }
 
+      li.appendChild(checkbox);
+      li.appendChild(document.createTextNode(" " + taskText));
+      document.getElementById("taskList").appendChild(li);
+      input.value = "";
+    }
 
-let shape = "rectangle"; 
+    // Log object to console
+    function logObject() {
+      let student = {
+        name: "Laila",
+        age: 17,
+        hobbies: ["drawing", "reading", "coding"],
+        grades: {
+          math: 88,
+          english: 92,
+          science: 95
+        },
+        active: true
+      };
 
-if (shape === "rectangle") {
-  let length = 5;
-  let width = 3;
-  let area = length * width;
-  console.log("Area = " + area);
-}
-
-if (shape === "circle") {
-  let radius = 4;
-  let area = 3.14 * radius * radius;
-  console.log("Area = " + area);
-}
+      console.log("Name:", student.name);
+      console.log("First hobby:", student.hobbies[0]);
+      console.log("Science grade:", student.grades.science);
+    }
