@@ -15,13 +15,13 @@ function calc(op) {
       document.getElementById("result").innerText = "Result: " + r;
     }
 
-    // Toggle paragraph visibility
+   
     function togglePara() {
     const p = document.getElementById("para");
     p.classList.toggle("hidden");
     }
 
-    // Add task to list
+   
     function addTask() {
       let input = document.getElementById("taskInput");
       let taskText = input.value.trim();
@@ -40,12 +40,12 @@ function calc(op) {
       input.value = "";
     }
 
-    // Log object to console
+    
     function logObject() {
       let student = {
         name: "Laila",
-        age: 17,
-        hobbies: ["drawing", "reading", "coding"],
+        age: 18,
+        hobbies: ["drawing", "reading", "swimming"],
         grades: {
           math: 88,
           english: 92,
