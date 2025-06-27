@@ -1,34 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-   <script src="./first.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Egypt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-   </head>
-   <body>
+  <header>
+    <h1>🇪🇬 Explore Egypt</h1>
+    <nav>
+      <ul>
+        <li><a href="#places">Places</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggleMode"></button></li>
+      </ul>
+    </nav>
+  </header>
 
-   <h2>To-Do List</h2>
-  <input type="text" id="taskInput" placeholder="Enter a task">
-  <button onclick="addTask()">Add Task</button>
-  <ul id="taskList"></ul>
-  <p>Total Tasks: <span id="taskCount">0</span></p>
+  <section id="places">
+    <h2>Top Destinations</h2>
+    <div class="places-container"></div>
+  </section>
 
-  <hr>
+  <section id="about">
+    <h2>About Explore Egypt</h2>
+    <p>Explore Egypt is a simple web app showcasing Egypt's iconic tourist sites  .</p>
+  </section>
 
-  <h2>Registration Form</h2>
-  <input type="text" id="name" placeholder="Name"><br>
-  <input type="email" id="email" placeholder="Email"><br>
-  <input type="password" id="password" placeholder="Password"><br>
-  <button onclick="validateForm()">Register</button>
-  <p id="formMessage"></p>
-  <hr>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    
+    <label>
+    <input type="checkbox" id="subscribe" />
+    I want to receive updates about new destinations.
+  </label>
+  </section>
 
-  <h2>Check User (Promise)</h2>
-  <input type="text" id="username" placeholder="Enter username">
-  <button onclick="checkUser()">Check</button>
-  <p id="promiseResult"></p>
-  
+  <section id="wishlist">
+    <h2>Plan Your Trip</h2>
+    <form id="wishForm">
+      <input type="text" id="wishInput" placeholder="Enter a place you want to visit" required />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="wishList"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Explore Egypt. All rights reserved.</p>
+  </footer>
+
+  <script src="first.js"></script>
 </body>
 </html>
