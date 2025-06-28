@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #b58900;
+  background-color: #c0559c;
   color: white;
   padding: 20px;
   text-align: center;
@@ -47,7 +47,7 @@ section {
 
 h2 {
   text-align: center;
-  color: #b58900;
+  color: #bf419d;
   margin-bottom: 20px;
 }
 
@@ -94,7 +94,7 @@ form input, form textarea, form button {
 }
 
 form button {
-  background-color: #b58900;
+  background-color: #e577bd;
   color: white;
   font-weight: bold;
   border: none;
@@ -140,7 +140,7 @@ body.dark form button {
 
 #wishlist h2 {
   text-align: center;
-  color: #b58900;
+  color: #b5008b;
   margin-bottom: 15px;
 }
 
